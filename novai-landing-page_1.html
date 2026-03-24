@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NovAI Agency — AI-Powered Growth for Indian Businesses</title>
+<meta name="description" content="We use AI to handle your content, automation & marketing — so you can focus on running your business.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:    #0D0D0D;
+  --paper:  #F5F2EC;
+  --cream:  #EDE9E0;
+  --gold:   #C9A84C;
+  --gold2:  #E8C87A;
+  --rust:   #C4572A;
+  --sage:   #4A6741;
+  --muted:  #7A7268;
+  --border: rgba(13,13,13,0.12);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Instrument Sans',sans-serif;
+  font-size:16px;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* ── NOISE TEXTURE OVERLAY ── */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:1000;opacity:.4;
+}
+
+/* ── NAV ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 6%;
+  background:rgba(245,242,236,0.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.logo{
+  font-family:'Clash Display',sans-serif;
+  font-weight:600;font-size:20px;
+  color:var(--ink);text-decoration:none;
+  letter-spacing:-0.5px;display:flex;align-items:center;gap:6px;
+}
+.logo-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--gold);display:inline-block;
+  animation:breathe 3s ease-in-out infinite;
+}
+@keyframes breathe{0%,100%{transform:scale(1);}50%{transform:scale(1.4);}}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{
+  color:var(--muted);text-decoration:none;
+  font-size:14px;font-weight:500;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--ink);}
+.nav-cta{
+  background:var(--ink)!important;color:var(--paper)!important;
+  padding:9px 22px;border-radius:100px;
+  font-size:13px!important;font-weight:500!important;
+  transition:background .2s, transform .2s!important;
+}
+.nav-cta:hover{background:var(--rust)!important;transform:translateY(-1px);}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  display:grid;place-items:center;
+  padding:130px 6% 80px;
+  position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,.08) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 60%, rgba(196,87,42,.06) 0%, transparent 60%);
+}
+.hero-grid-line{
+  position:absolute;top:0;bottom:0;
+  width:1px;background:var(--border);
+}
+.hero-inner{
+  max-width:900px;width:100%;
+  text-align:center;position:relative;
+  animation:fadeUp .8s ease both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:12px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:32px;
+  animation:fadeUp .7s .05s ease both;
+}
+.eyebrow-line{width:32px;height:1px;background:var(--gold);}
+
+h1{
+  font-family:'Clash Display',sans-serif;
+  font-size:clamp(44px,8vw,96px);
+  font-weight:600;line-height:.97;
+  letter-spacing:-3px;
+  margin-bottom:28px;
+  animation:fadeUp .7s .1s ease both;
+}
+h1 em{
+  font-style:normal;
+  color:var(--gold);
+  position:relative;
+}
+h1 em::after{
+  content:'';
+  position:absolute;bottom:-4px;left:0;right:0;height:2px;
+  background:var(--gold);opacity:.4;
+}
+.hero-sub{
+  font-size:clamp(16px,2vw,19px);
+  color:var(--muted);max-width:520px;
+  margin:0 auto 48px;
+  animation:fadeUp .7s .15s ease both;
+}
+.hero-actions{
+  display:flex;gap:14px;flex-wrap:wrap;
+  justify-content:center;
+  animation:fadeUp .7s .2s ease both;
+}
+.btn-fill{
+  background:var(--ink);color:var(--paper);
+  padding:14px 32px;border-radius:100px;
+  font-weight:500;font-size:15px;
+  text-decoration:none;font-family:'Instrument Sans',sans-serif;
+  transition:background .2s,transform .2s;
+  border:1.5px solid var(--ink);
+}
+.btn-fill:hover{background:var(--rust);border-color:var(--rust);transform:translateY(-2px);}
+.btn-ghost{
+  background:transparent;color:var(--ink);
+  padding:14px 32px;border-radius:100px;
+  font-weight:500;font-size:15px;
+  text-decoration:none;font-family:'Instrument Sans',sans-serif;
+  border:1.5px solid var(--border);
+  transition:border-color .2s,transform .2s;
+}
+.btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px);}
+
+.hero-ticker{
+  margin-top:72px;
+  display:flex;gap:48px;flex-wrap:wrap;
+  justify-content:center;
+  padding-top:48px;
+  border-top:1px solid var(--border);
+  animation:fadeUp .7s .25s ease both;
+}
+.ticker-item{}
+.ticker-num{
+  font-family:'Clash Display',sans-serif;
+  font-size:42px;font-weight:600;
+  letter-spacing:-2px;color:var(--ink);
+  line-height:1;
+}
+.ticker-num span{color:var(--gold);}
+.ticker-label{font-size:13px;color:var(--muted);margin-top:4px;}
+
+/* ── MARQUEE ── */
+.marquee-wrap{
+  overflow:hidden;border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:14px 0;background:var(--cream);
+}
+.marquee-track{
+  display:flex;gap:0;white-space:nowrap;
+  animation:marquee 22s linear infinite;
+}
+.marquee-track:hover{animation-play-state:paused;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}  }
+.marquee-item{
+  display:inline-flex;align-items:center;gap:16px;
+  padding:0 32px;
+  font-family:'Clash Display',sans-serif;
+  font-size:13px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);
+}
+.marquee-dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--gold);flex-shrink:0;
+}
+
+/* ── SECTIONS ── */
+section{padding:100px 6%;}
+.container{max-width:1100px;margin:0 auto;}
+.section-tag{
+  font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin-bottom:20px;
+  display:flex;align-items:center;gap:10px;
+}
+.section-tag::before{content:'';width:24px;height:1px;background:var(--gold);}
+h2{
+  font-family:'Clash Display',sans-serif;
+  font-size:clamp(30px,5vw,52px);
+  font-weight:600;letter-spacing:-1.5px;
+  line-height:1.05;margin-bottom:16px;
+}
+.lead{font-size:18px;color:var(--muted);max-width:500px;line-height:1.65;}
+
+/* ── SERVICES ── */
+#services{background:var(--ink);color:var(--paper);}
+#services h2{color:var(--paper);}
+#services .section-tag{color:var(--gold2);}
+#services .section-tag::before{background:var(--gold2);}
+#services .lead{color:rgba(245,242,236,.55);}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;overflow:hidden;
+  margin-top:56px;
+}
+.svc-card{
+  background:var(--ink);
+  padding:36px 32px;
+  transition:background .3s;
+  cursor:default;
+  border-right:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.svc-card:hover{background:#1a1a1a;}
+.svc-num{
+  font-family:'Clash Display',sans-serif;
+  font-size:11px;letter-spacing:3px;
+  color:rgba(245,242,236,.2);
+  margin-bottom:28px;
+}
+.svc-card h3{
+  font-family:'Clash Display',sans-serif;
+  font-size:20px;font-weight:600;
+  color:var(--paper);margin-bottom:10px;
+  letter-spacing:-.3px;
+}
+.svc-card p{font-size:14px;color:rgba(245,242,236,.5);line-height:1.65;}
+.svc-price{
+  margin-top:24px;
+  font-size:13px;font-weight:500;
+  color:var(--gold2);
+  display:flex;align-items:center;gap:8px;
+}
+.svc-price::before{content:'';width:16px;height:1px;background:var(--gold2);}
+
+/* ── PROCESS ── */
+#process{background:var(--paper);}
+.process-list{margin-top:64px;display:flex;flex-direction:column;gap:0;}
+.process-row{
+  display:grid;grid-template-columns:80px 1fr;gap:32px;
+  align-items:start;
+  padding:32px 0;
+  border-bottom:1px solid var(--border);
+  position:relative;
+}
+.process-row:last-child{border-bottom:none;}
+.p-num{
+  font-family:'Clash Display',sans-serif;
+  font-size:11px;letter-spacing:3px;
+  color:var(--muted);padding-top:4px;
+}
+.p-content h4{
+  font-family:'Clash Display',sans-serif;
+  font-size:22px;font-weight:600;
+  letter-spacing:-.5px;margin-bottom:8px;
+}
+.p-content p{font-size:15px;color:var(--muted);}
+.p-tag{
+  display:inline-block;margin-top:12px;
+  font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--sage);background:rgba(74,103,65,.08);
+  padding:4px 12px;border-radius:100px;
+}
+
+/* ── RESULTS / TESTIMONIALS ── */
+#results{background:var(--cream);}
+.testimonials{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:24px;margin-top:56px;
+}
+.testi-card{
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-radius:12px;padding:32px;
+  position:relative;
+}
+.testi-card::before{
+  content:'';
+  position:absolute;top:0;left:32px;right:32px;height:2px;
+  border-radius:0 0 2px 2px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2));
+}
+.testi-quote{
+  font-size:15px;color:#444;
+  line-height:1.7;margin-bottom:24px;
+  font-style:italic;
+}
+.testi-client{display:flex;align-items:center;gap:12px;}
+.testi-avatar{
+  width:40px;height:40px;border-radius:50%;
+  background:var(--gold);opacity:.15;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Clash Display',sans-serif;
+  font-size:15px;font-weight:600;color:var(--ink);
+  opacity:1;background:var(--cream);border:1px solid var(--border);
+}
+.testi-name{font-weight:500;font-size:14px;}
+.testi-biz{font-size:12px;color:var(--muted);}
+.testi-metric{
+  margin-top:20px;padding-top:20px;
+  border-top:1px solid var(--border);
+  font-family:'Clash Display',sans-serif;
+  font-size:26px;font-weight:600;letter-spacing:-1px;
+  color:var(--rust);
+}
+.testi-metric small{
+  display:block;font-family:'Instrument Sans',sans-serif;
+  font-size:12px;color:var(--muted);font-weight:400;letter-spacing:0;
+  margin-top:2px;
+}
+
+/* ── CTA ── */
+#contact{
+  background:var(--ink);
+  position:relative;overflow:hidden;
+}
+#contact::before{
+  content:'';
+  position:absolute;top:-200px;left:50%;transform:translateX(-50%);
+  width:700px;height:700px;
+  background:radial-gradient(circle,rgba(201,168,76,.1) 0%,transparent 65%);
+  pointer-events:none;
+}
+.cta-inner{
+  text-align:center;max-width:680px;margin:0 auto;
+  position:relative;
+}
+.cta-inner h2{color:var(--paper);}
+.cta-inner .lead{color:rgba(245,242,236,.5);max-width:100%;margin:0 auto 40px;}
+.contact-row{
+  display:flex;gap:12px;flex-wrap:wrap;justify-content:center;
+  margin-top:20px;
+}
+.contact-pill{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  padding:10px 20px;border-radius:100px;
+  font-size:14px;color:rgba(245,242,236,.6);
+  text-decoration:none;
+  transition:border-color .2s,color .2s;
+}
+.contact-pill:hover{border-color:var(--gold);color:var(--gold2);}
+
+/* ── FOOTER ── */
+footer{
+  padding:32px 6%;
+  border-top:1px solid rgba(255,255,255,.08);
+  background:var(--ink);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:16px;
+}
+.footer-logo{
+  font-family:'Clash Display',sans-serif;
+  font-size:18px;font-weight:600;color:var(--paper);
+  text-decoration:none;display:flex;align-items:center;gap:6px;
+}
+footer p{font-size:13px;color:rgba(245,242,236,.3);}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{
+  position:fixed;bottom:28px;right:28px;
+  width:52px;height:52px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 24px rgba(37,211,102,.35);
+  z-index:200;text-decoration:none;font-size:24px;
+  transition:transform .2s;
+}
+.wa-float:hover{transform:scale(1.1);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  .nav-links{display:none;}
+  .services-grid{grid-template-columns:1fr;}
+  .testimonials{grid-template-columns:1fr;}
+  h1{letter-spacing:-1.5px;}
+}
+@media(max-width:480px){
+  .hero-ticker{gap:28px;}
+  .process-row{grid-template-columns:1fr;gap:8px;}
+  .p-num{font-size:10px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    Nov<span style="color:var(--gold)">AI</span>
+    <span class="logo-dot"></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#results">Results</a></li>
+    <li><a href="https://calendly.com/parmarsahil775/free-ai-strategy-call" class="nav-cta" target="_blank">Free Call</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-line" style="left:20%"></div>
+  <div class="hero-grid-line" style="left:80%"></div>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-line"></span>
+      AI Agency — India
+      <span class="eyebrow-line"></span>
+    </div>
+
+    <h1>Grow Your Business<br>with <em>Artificial</em><br>Intelligence</h1>
+
+    <p class="hero-sub">
+      Hum AI use karke aapka content, automation aur marketing handle karte hain —
+      aap sirf results dekho.
+    </p>
+
+    <div class="hero-actions">
+      <a href="https://calendly.com/parmarsahil775/free-ai-strategy-call" class="btn-fill" target="_blank">
+        Book Free Strategy Call
+      </a>
+      <a href="#services" class="btn-ghost">Explore Services</a>
+    </div>
+
+    <div class="hero-ticker">
+      <div class="ticker-item">
+        <div class="ticker-num">10<span>x</span></div>
+        <div class="ticker-label">Faster Content</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-num">₹<span>0</span></div>
+        <div class="ticker-label">Setup Fee</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-num">48<span>hr</span></div>
+        <div class="ticker-label">Delivery Time</div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-num">100<span>%</span></div>
+        <div class="ticker-label">AI Powered</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item"><span class="marquee-dot"></span>Social Media Management</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>AI Content Writing</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Business Automation</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Email Marketing</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>AI Chatbots</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Lead Generation</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>SEO Blogs</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>WhatsApp Automation</span>
+    <!-- duplicate for seamless loop -->
+    <span class="marquee-item"><span class="marquee-dot"></span>Social Media Management</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>AI Content Writing</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Business Automation</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Email Marketing</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>AI Chatbots</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Lead Generation</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>SEO Blogs</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>WhatsApp Automation</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="section-tag">What We Do</div>
+    <h2>AI Services That<br>Actually Work</h2>
+    <p class="lead">Sab kuch AI se powered — fast, affordable, consistent.</p>
+
+    <div class="services-grid">
+      <div class="svc-card">
+        <div class="svc-num">01</div>
+        <h3>AI Content Package</h3>
+        <p>30 social media posts + 4 SEO blogs + 8 email newsletters — monthly, aapki brand voice mein.</p>
+        <div class="svc-price">₹15,000 – ₹30,000 / month</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">02</div>
+        <h3>Business Automation</h3>
+        <p>Lead capture, follow-up emails, WhatsApp replies — fully automatic. Aap sote rahein, system chalta rahe.</p>
+        <div class="svc-price">₹25,000 – ₹80,000 one-time</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">03</div>
+        <h3>AI Chatbot Setup</h3>
+        <p>24/7 intelligent chatbot jo customer queries handle kare aur leads capture kare — bina extra staff ke.</p>
+        <div class="svc-price">₹20,000 + ₹5,000/month</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">04</div>
+        <h3>Social Media Management</h3>
+        <p>Instagram, LinkedIn, Facebook — daily posting, engagement, analytics. AI content, human strategy.</p>
+        <div class="svc-price">₹12,000 – ₹25,000 / month</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">05</div>
+        <h3>Email Marketing Setup</h3>
+        <p>Welcome sequences, nurture emails, campaigns — sab AI se written aur automated.</p>
+        <div class="svc-price">₹18,000 one-time setup</div>
+      </div>
+      <div class="svc-card">
+        <div class="svc-num">06</div>
+        <h3>Full Growth System</h3>
+        <p>Content + Automation + Chatbot + Email — ek complete AI system. Maximum value, maximum results.</p>
+        <div class="svc-price">₹60,000 / month</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="container">
+    <div class="section-tag">How It Works</div>
+    <h2>Simple. Transparent.<br>Effective.</h2>
+
+    <div class="process-list">
+      <div class="process-row">
+        <div class="p-num">STEP 01</div>
+        <div class="p-content">
+          <h4>Free Strategy Call</h4>
+          <p>30 minutes mein aapke business ko samjhein. Koi commitment nahi, sirf clarity.</p>
+          <span class="p-tag">Zero Cost</span>
+        </div>
+      </div>
+      <div class="process-row">
+        <div class="p-num">STEP 02</div>
+        <div class="p-content">
+          <h4>Custom AI Roadmap</h4>
+          <p>Aapke liye specifically tailored plan — 24 ghante ke andar deliver hoti hai.</p>
+          <span class="p-tag">24hr Turnaround</span>
+        </div>
+      </div>
+      <div class="process-row">
+        <div class="p-num">STEP 03</div>
+        <div class="p-content">
+          <h4>We Build & Deliver</h4>
+          <p>Hamari AI system kaam karti hai — aap 48 ghante mein results dekho.</p>
+          <span class="p-tag">48hr Delivery</span>
+        </div>
+      </div>
+      <div class="process-row">
+        <div class="p-num">STEP 04</div>
+        <div class="p-content">
+          <h4>You Scale</h4>
+          <p>Results ke saath milke strategy refine karo. Aap grow karo, hum grow karte hain.</p>
+          <span class="p-tag">Ongoing Support</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="container">
+    <div class="section-tag">Client Results</div>
+    <h2>Real Businesses,<br>Real Numbers</h2>
+    <p class="lead">Clients jo hamare saath scale kar chuke hain.</p>
+
+    <div class="testimonials">
+      <div class="testi-card">
+        <p class="testi-quote">"Content ke liye pehle 2 din lagte the. Ab 2 ghante mein 30 posts ready hote hain. Time bachta hai, quality bhi better hai."</p>
+        <div class="testi-client">
+          <div class="testi-avatar">R</div>
+          <div>
+            <div class="testi-name">Rahul Mehta</div>
+            <div class="testi-biz">Real Estate, Pune</div>
+          </div>
+        </div>
+        <div class="testi-metric">3x Leads <small>in first 60 days</small></div>
+      </div>
+
+      <div class="testi-card">
+        <p class="testi-quote">"Automation ne mera pura follow-up system change kar diya. Ab manually kisi ko email nahi karna padta — sab automatic hai."</p>
+        <div class="testi-client">
+          <div class="testi-avatar">P</div>
+          <div>
+            <div class="testi-name">Priya Sharma</div>
+            <div class="testi-biz">Online Coaching, Mumbai</div>
+          </div>
+        </div>
+        <div class="testi-metric">₹2.4L Saved <small>per year in staff cost</small></div>
+      </div>
+
+      <div class="testi-card">
+        <p class="testi-quote">"AI chatbot ne 80% customer queries handle karna shuru kar diya. Staff ab sirf important cheezein dekhte hain."</p>
+        <div class="testi-client">
+          <div class="testi-avatar">A</div>
+          <div>
+            <div class="testi-name">Arjun Nair</div>
+            <div class="testi-biz">Restaurant Chain, Delhi</div>
+          </div>
+        </div>
+        <div class="testi-metric">80% Auto <small>customer queries handled by AI</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="section-tag" style="justify-content:center;color:var(--gold2);">
+        <span style="background:var(--gold2);"></span>Get Started
+      </div>
+      <h2>Ready to Scale<br>with AI?</h2>
+      <p class="lead">
+        Free 30-minute strategy call mein baat karo. Koi commitment nahi — sirf clarity milegi
+        ki AI aapke business ke liye kya kar sakti hai.
+      </p>
+      <a href="https://calendly.com/parmarsahil775/free-ai-strategy-call"
+         class="btn-fill" target="_blank"
+         style="background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:600;">
+        Book Free Strategy Call
+      </a>
+      <div class="contact-row">
+        <a href="mailto:parmarsahil775@gmail.com" class="contact-pill">✉ parmarsahil775@gmail.com</a>
+        <a href="https://wa.me/917XXXXXXXXX" class="contact-pill">💬 WhatsApp</a>
+        <a href="https://calendly.com/parmarsahil775/free-ai-strategy-call" target="_blank" class="contact-pill">📅 Calendly</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo">
+    Nov<span style="color:var(--gold)">AI</span>
+  </a>
+  <p>© 2025 NovAI Agency · parmarsahil775@gmail.com</p>
+  <p style="font-size:13px;color:rgba(245,242,236,.2);">AI-Powered · India</p>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/917XXXXXXXXX" class="wa-float" target="_blank">💬</a>
+
+<script>
+// Smooth reveal on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+    }
+  });
+}, {threshold: 0.1});
+
+document.querySelectorAll('.svc-card, .testi-card, .process-row').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
