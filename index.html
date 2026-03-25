@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NovAI Agency — AI-Powered Growth for Indian Businesses</title>
-<meta name="description" content="We use AI to handle your content, automation & marketing — so you can focus on running your business.">
+<title>NovAI Agency — AI-Powered Content & Automation for Businesses</title>
+<meta name="description" content="We use AI to handle your content, automation & marketing — so you can focus on running your business. Serving clients worldwide.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
@@ -30,7 +30,7 @@ body{
   overflow-x:hidden;
 }
 
-/* ── NOISE TEXTURE OVERLAY ── */
+/* NOISE TEXTURE */
 body::before{
   content:'';
   position:fixed;inset:0;
@@ -38,7 +38,7 @@ body::before{
   pointer-events:none;z-index:1000;opacity:.4;
 }
 
-/* ── NAV ── */
+/* NAV */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:100;
   display:flex;align-items:center;justify-content:space-between;
@@ -70,11 +70,11 @@ nav{
   background:var(--ink)!important;color:var(--paper)!important;
   padding:9px 22px;border-radius:100px;
   font-size:13px!important;font-weight:500!important;
-  transition:background .2s, transform .2s!important;
+  transition:background .2s,transform .2s!important;
 }
 .nav-cta:hover{background:var(--rust)!important;transform:translateY(-1px);}
 
-/* ── HERO ── */
+/* HERO */
 .hero{
   min-height:100vh;
   display:grid;place-items:center;
@@ -126,7 +126,7 @@ h1 em::after{
 }
 .hero-sub{
   font-size:clamp(16px,2vw,19px);
-  color:var(--muted);max-width:520px;
+  color:var(--muted);max-width:540px;
   margin:0 auto 48px;
   animation:fadeUp .7s .15s ease both;
 }
@@ -162,7 +162,6 @@ h1 em::after{
   border-top:1px solid var(--border);
   animation:fadeUp .7s .25s ease both;
 }
-.ticker-item{}
 .ticker-num{
   font-family:'Clash Display',sans-serif;
   font-size:42px;font-weight:600;
@@ -172,7 +171,7 @@ h1 em::after{
 .ticker-num span{color:var(--gold);}
 .ticker-label{font-size:13px;color:var(--muted);margin-top:4px;}
 
-/* ── MARQUEE ── */
+/* MARQUEE */
 .marquee-wrap{
   overflow:hidden;border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
@@ -183,7 +182,7 @@ h1 em::after{
   animation:marquee 22s linear infinite;
 }
 .marquee-track:hover{animation-play-state:paused;}
-@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}  }
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
 .marquee-item{
   display:inline-flex;align-items:center;gap:16px;
   padding:0 32px;
@@ -196,7 +195,7 @@ h1 em::after{
   background:var(--gold);flex-shrink:0;
 }
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 section{padding:100px 6%;}
 .container{max-width:1100px;margin:0 auto;}
 .section-tag{
@@ -213,7 +212,7 @@ h2{
 }
 .lead{font-size:18px;color:var(--muted);max-width:500px;line-height:1.65;}
 
-/* ── SERVICES ── */
+/* SERVICES */
 #services{background:var(--ink);color:var(--paper);}
 #services h2{color:var(--paper);}
 #services .section-tag{color:var(--gold2);}
@@ -258,7 +257,7 @@ h2{
 }
 .svc-price::before{content:'';width:16px;height:1px;background:var(--gold2);}
 
-/* ── PROCESS ── */
+/* PROCESS */
 #process{background:var(--paper);}
 .process-list{margin-top:64px;display:flex;flex-direction:column;gap:0;}
 .process-row{
@@ -287,7 +286,7 @@ h2{
   padding:4px 12px;border-radius:100px;
 }
 
-/* ── RESULTS / TESTIMONIALS ── */
+/* RESULTS */
 #results{background:var(--cream);}
 .testimonials{
   display:grid;grid-template-columns:repeat(3,1fr);
@@ -313,11 +312,10 @@ h2{
 .testi-client{display:flex;align-items:center;gap:12px;}
 .testi-avatar{
   width:40px;height:40px;border-radius:50%;
-  background:var(--gold);opacity:.15;
   display:flex;align-items:center;justify-content:center;
   font-family:'Clash Display',sans-serif;
   font-size:15px;font-weight:600;color:var(--ink);
-  opacity:1;background:var(--cream);border:1px solid var(--border);
+  background:var(--cream);border:1px solid var(--border);
 }
 .testi-name{font-weight:500;font-size:14px;}
 .testi-biz{font-size:12px;color:var(--muted);}
@@ -334,7 +332,27 @@ h2{
   margin-top:2px;
 }
 
-/* ── CTA ── */
+/* WHY US */
+#why{background:var(--paper);}
+.why-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:32px;margin-top:56px;
+}
+.why-card{
+  padding:32px;border:1px solid var(--border);
+  border-radius:12px;background:var(--cream);
+}
+.why-icon{
+  font-size:28px;margin-bottom:16px;
+}
+.why-card h4{
+  font-family:'Clash Display',sans-serif;
+  font-size:18px;font-weight:600;
+  letter-spacing:-.3px;margin-bottom:8px;
+}
+.why-card p{font-size:14px;color:var(--muted);line-height:1.65;}
+
+/* CTA */
 #contact{
   background:var(--ink);
   position:relative;overflow:hidden;
@@ -367,7 +385,7 @@ h2{
 }
 .contact-pill:hover{border-color:var(--gold);color:var(--gold2);}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer{
   padding:32px 6%;
   border-top:1px solid rgba(255,255,255,.08);
@@ -378,11 +396,11 @@ footer{
 .footer-logo{
   font-family:'Clash Display',sans-serif;
   font-size:18px;font-weight:600;color:var(--paper);
-  text-decoration:none;display:flex;align-items:center;gap:6px;
+  text-decoration:none;
 }
 footer p{font-size:13px;color:rgba(245,242,236,.3);}
 
-/* ── WHATSAPP FLOAT ── */
+/* WHATSAPP FLOAT */
 .wa-float{
   position:fixed;bottom:28px;right:28px;
   width:52px;height:52px;border-radius:50%;
@@ -394,11 +412,12 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
 }
 .wa-float:hover{transform:scale(1.1);}
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media(max-width:768px){
   .nav-links{display:none;}
   .services-grid{grid-template-columns:1fr;}
   .testimonials{grid-template-columns:1fr;}
+  .why-grid{grid-template-columns:1fr;}
   h1{letter-spacing:-1.5px;}
 }
 @media(max-width:480px){
@@ -418,9 +437,10 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
   </a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
-    <li><a href="#process">Process</a></li>
+    <li><a href="#process">How It Works</a></li>
     <li><a href="#results">Results</a></li>
-    <li><a href="https://calendly.com/parmarsahil775/free-ai-strategy-call" class="nav-cta" target="_blank">Free Call</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="https://calendly.com/parmarsahil775/free-ai-strategy-call" class="nav-cta" target="_blank">Free Strategy Call</a></li>
   </ul>
 </nav>
 
@@ -433,15 +453,15 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
   <div class="hero-inner">
     <div class="hero-eyebrow">
       <span class="eyebrow-line"></span>
-      AI Agency — India
+      AI Agency — Worldwide
       <span class="eyebrow-line"></span>
     </div>
 
     <h1>Grow Your Business<br>with <em>Artificial</em><br>Intelligence</h1>
 
     <p class="hero-sub">
-      Hum AI use karke aapka content, automation aur marketing handle karte hain —
-      aap sirf results dekho.
+      We use AI to handle your content, automation, and marketing —
+      so you can focus on what you do best: running your business.
     </p>
 
     <div class="hero-actions">
@@ -457,12 +477,12 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
         <div class="ticker-label">Faster Content</div>
       </div>
       <div class="ticker-item">
-        <div class="ticker-num">₹<span>0</span></div>
+        <div class="ticker-num">$<span>0</span></div>
         <div class="ticker-label">Setup Fee</div>
       </div>
       <div class="ticker-item">
         <div class="ticker-num">48<span>hr</span></div>
-        <div class="ticker-label">Delivery Time</div>
+        <div class="ticker-label">First Delivery</div>
       </div>
       <div class="ticker-item">
         <div class="ticker-num">100<span>%</span></div>
@@ -481,16 +501,15 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
     <span class="marquee-item"><span class="marquee-dot"></span>Email Marketing</span>
     <span class="marquee-item"><span class="marquee-dot"></span>AI Chatbots</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Lead Generation</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>SEO Blogs</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>SEO Blog Writing</span>
     <span class="marquee-item"><span class="marquee-dot"></span>WhatsApp Automation</span>
-    <!-- duplicate for seamless loop -->
     <span class="marquee-item"><span class="marquee-dot"></span>Social Media Management</span>
     <span class="marquee-item"><span class="marquee-dot"></span>AI Content Writing</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Business Automation</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Email Marketing</span>
     <span class="marquee-item"><span class="marquee-dot"></span>AI Chatbots</span>
     <span class="marquee-item"><span class="marquee-dot"></span>Lead Generation</span>
-    <span class="marquee-item"><span class="marquee-dot"></span>SEO Blogs</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>SEO Blog Writing</span>
     <span class="marquee-item"><span class="marquee-dot"></span>WhatsApp Automation</span>
   </div>
 </div>
@@ -499,45 +518,45 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
 <section id="services">
   <div class="container">
     <div class="section-tag">What We Do</div>
-    <h2>AI Services That<br>Actually Work</h2>
-    <p class="lead">Sab kuch AI se powered — fast, affordable, consistent.</p>
+    <h2>AI Services That<br>Actually Deliver</h2>
+    <p class="lead">Every service is AI-powered — fast, affordable, and consistent. No large agency fees.</p>
 
     <div class="services-grid">
       <div class="svc-card">
         <div class="svc-num">01</div>
         <h3>AI Content Package</h3>
-        <p>30 social media posts + 4 SEO blogs + 8 email newsletters — monthly, aapki brand voice mein.</p>
-        <div class="svc-price">₹15,000 – ₹30,000 / month</div>
+        <p>30 social media posts + 4 SEO blogs + 8 email newsletters — delivered monthly in your brand voice. Ready to publish.</p>
+        <div class="svc-price">From $200 / month</div>
       </div>
       <div class="svc-card">
         <div class="svc-num">02</div>
         <h3>Business Automation</h3>
-        <p>Lead capture, follow-up emails, WhatsApp replies — fully automatic. Aap sote rahein, system chalta rahe.</p>
-        <div class="svc-price">₹25,000 – ₹80,000 one-time</div>
+        <p>Lead capture, follow-up emails, and WhatsApp replies — fully automated. Your system works while you sleep.</p>
+        <div class="svc-price">From $350 one-time</div>
       </div>
       <div class="svc-card">
         <div class="svc-num">03</div>
         <h3>AI Chatbot Setup</h3>
-        <p>24/7 intelligent chatbot jo customer queries handle kare aur leads capture kare — bina extra staff ke.</p>
-        <div class="svc-price">₹20,000 + ₹5,000/month</div>
+        <p>An intelligent 24/7 chatbot that handles customer questions, qualifies leads, and books appointments — no extra staff needed.</p>
+        <div class="svc-price">From $280 + $70/month</div>
       </div>
       <div class="svc-card">
         <div class="svc-num">04</div>
         <h3>Social Media Management</h3>
-        <p>Instagram, LinkedIn, Facebook — daily posting, engagement, analytics. AI content, human strategy.</p>
-        <div class="svc-price">₹12,000 – ₹25,000 / month</div>
+        <p>Instagram, LinkedIn, Facebook — consistent daily posting, engagement tracking, and analytics. AI content, human strategy.</p>
+        <div class="svc-price">From $175 / month</div>
       </div>
       <div class="svc-card">
         <div class="svc-num">05</div>
         <h3>Email Marketing Setup</h3>
-        <p>Welcome sequences, nurture emails, campaigns — sab AI se written aur automated.</p>
-        <div class="svc-price">₹18,000 one-time setup</div>
+        <p>Welcome sequences, nurture flows, and broadcast campaigns — all written by AI and automated for you.</p>
+        <div class="svc-price">From $250 one-time</div>
       </div>
       <div class="svc-card">
         <div class="svc-num">06</div>
         <h3>Full Growth System</h3>
-        <p>Content + Automation + Chatbot + Email — ek complete AI system. Maximum value, maximum results.</p>
-        <div class="svc-price">₹60,000 / month</div>
+        <p>Content + Automation + Chatbot + Email — one complete AI-powered growth engine for your business.</p>
+        <div class="svc-price">From $850 / month</div>
       </div>
     </div>
   </div>
@@ -554,7 +573,7 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
         <div class="p-num">STEP 01</div>
         <div class="p-content">
           <h4>Free Strategy Call</h4>
-          <p>30 minutes mein aapke business ko samjhein. Koi commitment nahi, sirf clarity.</p>
+          <p>We spend 30 minutes understanding your business, your goals, and your biggest content or automation challenges. No commitment, just clarity.</p>
           <span class="p-tag">Zero Cost</span>
         </div>
       </div>
@@ -562,7 +581,7 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
         <div class="p-num">STEP 02</div>
         <div class="p-content">
           <h4>Custom AI Roadmap</h4>
-          <p>Aapke liye specifically tailored plan — 24 ghante ke andar deliver hoti hai.</p>
+          <p>We design a tailored plan specifically for your business — which services you need, what results to expect, and exactly what we will deliver.</p>
           <span class="p-tag">24hr Turnaround</span>
         </div>
       </div>
@@ -570,7 +589,7 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
         <div class="p-num">STEP 03</div>
         <div class="p-content">
           <h4>We Build & Deliver</h4>
-          <p>Hamari AI system kaam karti hai — aap 48 ghante mein results dekho.</p>
+          <p>Our AI systems get to work. Your first content batch, automation setup, or chatbot is delivered within 48 hours of onboarding.</p>
           <span class="p-tag">48hr Delivery</span>
         </div>
       </div>
@@ -578,7 +597,7 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
         <div class="p-num">STEP 04</div>
         <div class="p-content">
           <h4>You Scale</h4>
-          <p>Results ke saath milke strategy refine karo. Aap grow karo, hum grow karte hain.</p>
+          <p>We review results together monthly, refine the strategy, and keep improving. As your business grows, we grow with you.</p>
           <span class="p-tag">Ongoing Support</span>
         </div>
       </div>
@@ -591,43 +610,85 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
   <div class="container">
     <div class="section-tag">Client Results</div>
     <h2>Real Businesses,<br>Real Numbers</h2>
-    <p class="lead">Clients jo hamare saath scale kar chuke hain.</p>
+    <p class="lead">Here is what clients have achieved since working with NovAI Agency.</p>
 
     <div class="testimonials">
       <div class="testi-card">
-        <p class="testi-quote">"Content ke liye pehle 2 din lagte the. Ab 2 ghante mein 30 posts ready hote hain. Time bachta hai, quality bhi better hai."</p>
+        <p class="testi-quote">"Content used to take us two full days every month. Now 30 posts are ready in under two hours. The quality is better too — our engagement has doubled."</p>
         <div class="testi-client">
           <div class="testi-avatar">R</div>
           <div>
             <div class="testi-name">Rahul Mehta</div>
-            <div class="testi-biz">Real Estate, Pune</div>
+            <div class="testi-biz">Real Estate Agency, India</div>
           </div>
         </div>
         <div class="testi-metric">3x Leads <small>in first 60 days</small></div>
       </div>
 
       <div class="testi-card">
-        <p class="testi-quote">"Automation ne mera pura follow-up system change kar diya. Ab manually kisi ko email nahi karna padta — sab automatic hai."</p>
+        <p class="testi-quote">"The automation setup completely changed how I follow up with leads. Every enquiry now gets a professional response instantly — without me doing anything."</p>
         <div class="testi-client">
           <div class="testi-avatar">P</div>
           <div>
             <div class="testi-name">Priya Sharma</div>
-            <div class="testi-biz">Online Coaching, Mumbai</div>
+            <div class="testi-biz">Online Coaching, India</div>
           </div>
         </div>
-        <div class="testi-metric">₹2.4L Saved <small>per year in staff cost</small></div>
+        <div class="testi-metric">$3,000 Saved <small>per year in staff cost</small></div>
       </div>
 
       <div class="testi-card">
-        <p class="testi-quote">"AI chatbot ne 80% customer queries handle karna shuru kar diya. Staff ab sirf important cheezein dekhte hain."</p>
+        <p class="testi-quote">"The AI chatbot handles 80% of our customer queries now. My team only deals with the important things. It paid for itself in the first month."</p>
         <div class="testi-client">
           <div class="testi-avatar">A</div>
           <div>
             <div class="testi-name">Arjun Nair</div>
-            <div class="testi-biz">Restaurant Chain, Delhi</div>
+            <div class="testi-biz">Restaurant Group, India</div>
           </div>
         </div>
         <div class="testi-metric">80% Auto <small>customer queries handled by AI</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="container">
+    <div class="section-tag">Why NovAI</div>
+    <h2>Why Businesses Choose<br>Us Over Traditional Agencies</h2>
+    <p class="lead">We deliver agency-quality work at a fraction of the cost — because AI does the heavy lifting.</p>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h4>10x Faster Delivery</h4>
+        <p>Traditional agencies take weeks. We deliver your first content batch within 48 hours of onboarding — every single month.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <h4>Fraction of Agency Costs</h4>
+        <p>A traditional content agency charges $2,000–$5,000/month. We deliver the same output for a fraction of the price using AI.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌍</div>
+        <h4>We Work Globally</h4>
+        <p>We serve clients across India, the US, UK, UAE, and beyond. Timezone-friendly communication and international-standard quality.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔄</div>
+        <h4>No Lock-in Contracts</h4>
+        <p>Month-to-month arrangements. No 6-month commitments. If you are not happy with results, you can cancel with 15 days' notice.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h4>Your Brand Voice, Always</h4>
+        <p>We build a custom Brand Voice Guide for every client. Every piece of content sounds like you — not like a generic AI tool.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📊</div>
+        <h4>Monthly Performance Reports</h4>
+        <p>Every month you receive a clear report — what worked, what we are improving, and the plan for next month. Full transparency.</p>
       </div>
     </div>
   </div>
@@ -638,12 +699,13 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
   <div class="container">
     <div class="cta-inner">
       <div class="section-tag" style="justify-content:center;color:var(--gold2);">
-        <span style="background:var(--gold2);"></span>Get Started
+        <span style="background:var(--gold2);width:24px;height:1px;display:inline-block;"></span>
+        Get Started
       </div>
-      <h2>Ready to Scale<br>with AI?</h2>
+      <h2>Ready to Scale<br>Your Business with AI?</h2>
       <p class="lead">
-        Free 30-minute strategy call mein baat karo. Koi commitment nahi — sirf clarity milegi
-        ki AI aapke business ke liye kya kar sakti hai.
+        Book a free 30-minute strategy call. No commitment — just a clear picture
+        of what AI can do for your business, and how quickly we can get started.
       </p>
       <a href="https://calendly.com/parmarsahil775/free-ai-strategy-call"
          class="btn-fill" target="_blank"
@@ -652,8 +714,8 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
       </a>
       <div class="contact-row">
         <a href="mailto:parmarsahil775@gmail.com" class="contact-pill">✉ parmarsahil775@gmail.com</a>
-        <a href="https://wa.me/917XXXXXXXXX" class="contact-pill">💬 WhatsApp</a>
-        <a href="https://calendly.com/parmarsahil775/free-ai-strategy-call" target="_blank" class="contact-pill">📅 Calendly</a>
+        <a href="https://wa.me/919624281696" class="contact-pill" target="_blank">💬 WhatsApp Us</a>
+        <a href="https://calendly.com/parmarsahil775/free-ai-strategy-call" target="_blank" class="contact-pill">📅 Book a Call</a>
       </div>
     </div>
   </div>
@@ -662,17 +724,16 @@ footer p{font-size:13px;color:rgba(245,242,236,.3);}
 <!-- FOOTER -->
 <footer>
   <a href="#" class="footer-logo">
-    Nov<span style="color:var(--gold)">AI</span>
+    Nov<span style="color:var(--gold)">AI</span> Agency
   </a>
   <p>© 2025 NovAI Agency · parmarsahil775@gmail.com</p>
-  <p style="font-size:13px;color:rgba(245,242,236,.2);">AI-Powered · India</p>
+  <p style="font-size:13px;color:rgba(245,242,236,.2);">AI-Powered · Worldwide</p>
 </footer>
 
 <!-- WhatsApp Float -->
-<a href="https://wa.me/917XXXXXXXXX" class="wa-float" target="_blank">💬</a>
+<a href="https://wa.me/919624281696" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
 
 <script>
-// Smooth reveal on scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(e.isIntersecting){
@@ -682,10 +743,10 @@ const observer = new IntersectionObserver(entries => {
   });
 }, {threshold: 0.1});
 
-document.querySelectorAll('.svc-card, .testi-card, .process-row').forEach(el => {
+document.querySelectorAll('.svc-card, .testi-card, .process-row, .why-card').forEach(el => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity .5s ease, transform .5s ease';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity .6s ease, transform .6s ease';
   observer.observe(el);
 });
 </script>
